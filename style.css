@@ -39,32 +39,31 @@ h1 {
 
 /* Input Section */
 .input-container {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 #todo-input {
-    flex-grow: 1;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  flex-grow: 1;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 #add-task-btn {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 #add-task-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
-
 
 /* Column Styling */
 .list {
@@ -113,11 +112,6 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
-
 /* Delete Button */
 .delete-button {
   background-color: #ff4d4d;
@@ -153,7 +147,7 @@ h1 {
   cursor: grabbing;
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Bring it to the front */
+  z-index: 1000;
 }
 
 .task-list .card {
@@ -165,7 +159,7 @@ h1 {
   opacity: 0.95; 
 }
 
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .board {
     flex-direction: column;
@@ -175,5 +169,33 @@ h1 {
   .list {
     width: 80%;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .board {
+    gap: 10px;
+  }
+
+  .list {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  #todo-input {
+    padding: 10px;
+  }
+
+  #add-task-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .list h2 {
+    font-size: 1.2rem;
   }
 }
